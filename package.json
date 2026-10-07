@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://usuario.github.io/mi-proyecto",
+  "homepage": "https://MarcelaVelasco.github.io/mi-proyecto",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
