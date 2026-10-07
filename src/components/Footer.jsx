@@ -1,7 +1,9 @@
+const anio = new Date().getFullYear()
+
 function Footer() {
   return (
     <footer className="footer">
-      <p>&copy; {new Date().getFullYear()} Mi Portafolio</p>
+      <p>&copy; {anio} Mi Portafolio</p>
     </footer>
   )
 }
