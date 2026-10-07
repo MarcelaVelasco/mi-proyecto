@@ -1,8 +1,129 @@
-/* Para que el menú fijo no tape los títulos al navegar */
-section {
-  scroll-margin-top: 4rem;
+:root {
+  --tinta: #1f2933;
+  --marino: #16222e;
+  --acero: #334e68;
+  --acero-oscuro: #243b53;
+  --niebla: #f4f6f8;
+  --linea: #d9e0e7;
+  --dorado: #b08d57;
+
+  --bs-primary: #334e68;
+  --bs-primary-rgb: 51, 78, 104;
+  --bs-body-color: var(--tinta);
+  --bs-body-font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
+html { scroll-behavior: smooth; }
+section { scroll-margin-top: 3.5rem; }
+
+h1, h2, h3, .serif { font-family: Georgia, 'Times New Roman', serif; }
+
+/* Botones en tonos sobrios */
+.btn-primary {
+  --bs-btn-bg: var(--acero);
+  --bs-btn-border-color: var(--acero);
+  --bs-btn-hover-bg: var(--acero-oscuro);
+  --bs-btn-hover-border-color: var(--acero-oscuro);
+  --bs-btn-active-bg: var(--acero-oscuro);
+  --bs-btn-active-border-color: var(--acero-oscuro);
 }
+.btn-outline-primary {
+  --bs-btn-color: var(--acero);
+  --bs-btn-border-color: var(--acero);
+  --bs-btn-hover-bg: var(--acero);
+  --bs-btn-hover-border-color: var(--acero);
+  --bs-btn-active-bg: var(--acero);
+  --bs-btn-active-border-color: var(--acero);
+}
+
+/* Navegación y hero */
+.nav-oscuro { background: #0f1923; }
+.nav-oscuro a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 1rem;
+}
+.nav-oscuro a:hover { color: #fff; }
+
+.hero {
+  background: linear-gradient(135deg, var(--marino), var(--acero-oscuro));
+  color: #fff;
+}
+.hero .sobretitulo {
+  color: var(--dorado);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.avatar {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  line-height: 156px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 3.5rem;
+  letter-spacing: 0.05em;
+}
+
+/* Secciones */
+.fondo-suave { background: var(--niebla); }
+.titulo-seccion { margin-bottom: 2.5rem; }
+.titulo-seccion::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--dorado);
+  margin-top: 0.75rem;
+}
+
+/* Línea de tiempo */
+.linea-tiempo {
+  border-left: 2px solid var(--linea);
+  margin-left: 0.5rem;
+  padding-left: 1.5rem;
+}
+.hito { position: relative; margin-bottom: 2rem; }
+.hito:last-child { margin-bottom: 0; }
+.hito::before {
+  content: '';
+  position: absolute;
+  left: calc(-1.5rem - 7px);
+  top: 0.4rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--acero);
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px var(--acero);
+}
+
+/* Etiquetas y tarjetas */
+.etiqueta {
+  background: #e4e9ee;
+  color: var(--acero);
+  font-weight: 500;
+  margin: 0 0.4rem 0.4rem 0;
+}
+.tarjeta-proyecto {
+  border: 1px solid var(--linea);
+  border-top: 3px solid var(--acero);
+  border-radius: 4px;
+}
+.tarjeta-proyecto:hover {
+  box-shadow: 0 0.5rem 1.25rem rgba(22, 34, 46, 0.12);
+}
+.numero-proyecto {
+  color: var(--dorado);
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+.bloque-contacto { background: var(--marino); color: #fff; }
+.pie { background: #0f1923; color: #94a3b8; }

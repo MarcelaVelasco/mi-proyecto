@@ -2,8 +2,10 @@ const anio = new Date().getFullYear()
 
 function Footer() {
   return (
-    <footer className="bg-dark text-white text-center py-3 mt-5">
-      <p className="mb-0">&copy; {anio} Mi Portafolio</p>
+    <footer className="pie text-center py-4">
+      <p className="mb-0 small">
+        &copy; {anio} Katherine Umaña · Hecho con React y Bootstrap
+      </p>
     </footer>
   )
 }
